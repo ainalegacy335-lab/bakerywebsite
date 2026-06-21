@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Treats Bakery</title>
+    <style>
+        :root {
+            --bg-cream: #FFFDF9;       /* Warm, soft cream background */
+            --pastry-pink: #FFC0CB;    /* Classic pastel pink for accents */
+            --berry-pink: #D05A7E;     /* Deep berry pink for headings and buttons */
+            --crust-brown: #5C4033;    /* Warm dark brown for readable text */
+            --card-bg: #FFFFFF;        /* Crisp white for the pastry cards */
+        }
+
+        body {
+            font-family: 'Georgia', serif; /* Gives a cozy, artisanal bakery feel */
+            background-color: var(--bg-cream);
+            color: var(--crust-brown);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #FFE4E1; /* Misty Rose */
+            background-image: linear-gradient(180deg, #FFE4E1 0%, #FFFDF9 100%);
+            text-align: center;
+            padding: 4rem 1rem 2rem 1rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            color: var(--berry-pink);
+            font-family: 'Brush Script MT', cursive, serif; /* Elegant script style */
+        }
+
+        header p {
+            margin: 0.5rem 0 0 0;
+            font-size: 1.2rem;
+            font-style: italic;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(208, 90, 126, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: var(--berry-pink);
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0 1.5rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--pastry-pink);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        h2 {
+            color: var(--berry-pink);
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Cute decorative line under headings */
+        h2::after {
+            content: '';
+            display: block;
+            width: 50%;
+            height: 3px;
+            background-color: var(--pastry-pink);
+            margin: 0.5rem auto 0 auto;
+            border-radius: 2px;
+        }
+
+        .about-text {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* Photo Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .pastry-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(92, 64, 51, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #FFF0F5;
+        }
+
+        .pastry-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(208, 90, 126, 0.15);
+        }
+
+        /* Image Placeholder styling */
+        .pastry-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover; /* Keeps images beautifully cropped */
+            background-color: #FFEBF0; /* Fallback pink color if image is missing */
+        }
+
+        .pastry-info {
+            padding: 1.5rem;
+        }
+
+        .pastry-info h3 {
+            margin: 0 0 0.5rem 0;
+            color: var(--berry-pink);
+            font-size: 1.4rem;
+        }
+
+        .pastry-info p {
+            margin: 0;
+            font-size: 0.95rem;
+            font-family: 'Segoe UI', sans-serif;
+            color: #6e584f;
+        }
+
+        .order-btn {
+            display: inline-block;
+            background-color: var(--berry-pink);
+            color: white;
+            padding: 0.7rem 2rem;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-family: 'Segoe UI', sans-serif;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+
+        .order-btn:hover {
+            background-color: #b04664;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 1rem;
+            background-color: #FFE4E1;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1> Aina Bakery.</h1>
+        <p>Freshly Baked Happiness Everyday</p>
+    </header>
+
+    <nav>
+        <a href="#about">Our Story</a>
+        <a href="#menu">Our Pastries</a>
+        <a href="#visit">Visit Us</a>
+    </nav>
+
+    <div class="container">
+
+        <section id="about">
+            <h2>Our Story</h2>
+            <p class="about-text">
+                Welcome to The Pink Whisk! We specialize in artisanal, small-batch pastries made with love and high-quality ingredients. From flaky, buttery croissants to beautifully decorated custom cakes, we bake everything fresh every morning to brighten your day.
+            </p>
+        </section>
+
+        <section id="menu">
+            <h2>On the Counter</h2>
+            <p style="font-family: 'Segoe UI', sans-serif; color: #887780;">Take a look at some of our fresh daily bakes</p>
+            
+            <div class="gallery-grid">
+                
+                <div class="pastry-card">
+                    <img src="lemoncake.jpg" alt="Strawberry Almond Croissant" class="pastry-image">
+                    <div class="pastry-info">
+                        <h3>Lemoncake</h3>
+                        <p> I sell one pieces for Rm20.</p>
+                    </div>
+                </div>
+
+                <div class="pastry-card">
+                    <img src="chocolate cake.jpg" alt="Assorted Pink Macarons" class="pastry-image">
+                    <div class="pastry-info">
+                        <h3>Chocolate cakes</h3>
+                        <p> I sell one pieces for RM10.</p>
+                    </div>
+                </div>
+
+                <div class="pastry-card">
+                    <img src="egg tart.jpg" alt="Strawberry Vanilla Cupcake" class="pastry-image">
+                    <div class="pastry-info">
+                        <h3> Egg Tart </h3>
+                        <p>Fluffy vanilla bean cake topped with a silky, pastel-pink rosewater buttercream swirl.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="visit">
+            <h2> Please Visit Us </h2>
+            <p style="font-family: 'Segoe UI', sans-serif; margin-bottom: 0.5rem;"><strong>Address:</strong> Kota Fesyen MITC,</p>
+            <p style="font-family: 'Segoe UI', sans-serif; margin-bottom: 1.5rem;"><strong>Hours:</strong> Tues - Sun: 08:00 AM- 08:00 PM</p>
+            <a href="mailto:hello@thepinkwhisk.com" class="order-btn">Place a Custom Order</a>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 The Pink Whisk. Baked with 💖 and sugar.</p>
+    </footer>
+
+</body>
+</html>
